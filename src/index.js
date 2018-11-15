@@ -3,15 +3,11 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-// <!-- Nucleo Icons -->
-// <link href="../src/assets/css/nucleo-icons.css" rel="stylesheet" />
 // <!-- CSS Files -->
-// <link href="../src/assets/css/blk-design-system.css?v=1.0.0" rel="stylesheet" />
-// <!-- CSS Just for demo purpose, don't include it in your project -->
-// import './assets/css/nucleo-icons.css'
-// import './assets/css/blk-design-system.css'
+import './assets/css/blk-design-system.css'
 
-// import './assets/js/core/jquery.min'
+// <!-- Nucleo Icons -->
+// import './assets/css/nucleo-icons.css'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
