@@ -1,5 +1,6 @@
 const config = {
-  websiteName: "SUBARNANATO",
+  websiteName: "subarnanto",
+  com:".com",
   webDescription: "Web Developer & Designer",
   firstnameLabel: "First Name",
   lastnameLabel: "Last Name",

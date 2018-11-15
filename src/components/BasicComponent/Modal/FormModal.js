@@ -1,9 +1,9 @@
 import React from "react";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import googleLogo from "../../assets/img/google.svg";
-import githubLogo from '../../assets/img/github.svg'
+import googleLogo from "../../../assets/img/google.svg";
+import githubLogo from "../../../assets/img/github.svg";
 
 export default function FormModal() {
   return (
@@ -25,7 +25,11 @@ export default function FormModal() {
               data-dismiss="modal"
               aria-hidden="true"
             >
-              <i className="tim-icons icon-simple-remove text-white" />
+              <FontAwesomeIcon
+                icon={["far", "window-close"]}
+                // className="text-white"
+              />
+              {/* <i className="tim-icons icon-simple-remove text-white" /> */}
             </button>
             <div className="text-muted text-center ml-auto mr-auto">
               <h3 className="mb-0">Sign in with</h3>
@@ -49,7 +53,7 @@ export default function FormModal() {
                   <div className="input-group-prepend">
                     <span className="input-group-text">
                       {/* <i className="tim-icons icon-email-85" /> */}
-                      <FontAwesomeIcon icon="envelope-square"/>
+                      <FontAwesomeIcon icon="envelope-square" />
                       {/* <FontAwesomeIcon icon={['fab', 'apple']}/> */}
                     </span>
                   </div>
@@ -63,7 +67,8 @@ export default function FormModal() {
               <div className="form-group">
                 <div className="input-group input-group-alternative">
                   <div className="input-group-prepend">
-                    <span className="input-group-text"><FontAwesomeIcon icon="unlock-alt"/>
+                    <span className="input-group-text">
+                      <FontAwesomeIcon icon={["fas", "lock"]} />
                     </span>
                   </div>
                   <input
@@ -75,7 +80,7 @@ export default function FormModal() {
               </div>
               <div className="form-check mt-3">
                 <label className="form-check-label">
-                  <input className="form-check-input" type="checkbox" checked="true"/>
+                  <input className="form-check-input" type="checkbox" checked />
                   <span className="form-check-sign" />
                   Remember me!
                 </label>

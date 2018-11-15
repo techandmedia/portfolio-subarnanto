@@ -1,28 +1,48 @@
 import React from "react";
 import config from "../../data/ConfigData";
 
-export default function NavBar() {
-  const { mainURL, websiteName, webDescription } = config;
+export default function NavBar(props) {
+  const { com, mainURL, websiteName, webDescription } = config;
+  const { onRouteChange } = props;
   return (
     <nav
-      className="navbar navbar-expand-lg fixed-top navbar-danger "
+      className="navbar navbar-expand-lg fixed-top navbar-info "
       color-on-scroll="100"
     >
       <div className="container">
         <div className="navbar-translate">
           <a
             className="navbar-brand"
-            href={mainURL}
+            href="/"
             rel="tooltip"
             title="Build your beautiful website today!"
             data-placement="bottom"
-            target="_blank"
-            style={{lineHeight: 1}}
+            // target="_blank"
+            style={{ lineHeight: 1 }}
+            // onClick={() => onRouteChange('home-page')}
           >
-            <span>{websiteName}</span> <br/>
-            <span style={{fontSize: 12}}>
-            {webDescription}
-              </span> 
+            <span
+              style={{
+                textTransform: "lowercase",
+                fontSize: 20,
+                fontWeight: 500
+              }}
+            >
+              {websiteName}
+            </span>
+            <span
+              style={{
+                textTransform: "lowercase",
+                fontWeight: 300,
+                fontSize: 12
+              }}
+            >
+              {com}
+            </span>
+            <br />
+            <span style={{ fontSize: 13, fontWeight: 300 }}>
+              {webDescription}
+            </span>
           </a>
           <button
             className="navbar-toggler navbar-toggler"
@@ -45,7 +65,23 @@ export default function NavBar() {
           <div className="navbar-collapse-header">
             <div className="row">
               <div className="col-6 collapse-brand">
-                <a style={{fontSize: 14}}>{websiteName}</a>
+                <a
+                  className="text-primary"
+                  style={{ fontSize: 18, fontWeight: 400 }}
+                >
+                  <span style={{ textTransform: "lowercase" }}>
+                    {websiteName}
+                  </span>
+                  <span
+                    style={{
+                      textTransform: "lowercase",
+                      fontWeight: 100,
+                      fontSize: 9
+                    }}
+                  >
+                    {com}
+                  </span>
+                </a>
               </div>
               <div className="col-6 collapse-close text-right">
                 <button
@@ -111,23 +147,24 @@ export default function NavBar() {
                 <i className="fa fa-cogs d-lg-none d-xl-none" /> My Projects
               </a>
               <div className="dropdown-menu dropdown-with-icons">
+                
                 <a
-                  href="https://demos.creative-tim.com/blk-design-system/docs/1.0/getting-started/overview.html"
+                  // href="examples/landing-page.html"
                   className="dropdown-item"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => onRouteChange("project-current")}
                 >
-                  <i className="tim-icons icon-paper" /> Current Project
-                </a>
-                <a href="examples/register-page.html" className="dropdown-item">
-                  <i className="tim-icons icon-bullet-list-67" />
-                  Past Project
-                </a>
-                <a href="examples/landing-page.html" className="dropdown-item">
                   <i className="tim-icons icon-image-02" />
-                  Landing Page
+                  Current Project
                 </a>
-                <a href="examples/profile-page.html" className="dropdown-item">
+                <a
+                  // href="examples/profile-page.html"
+                  className="dropdown-item"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => onRouteChange("project-past")}
+                >
                   <i className="tim-icons icon-single-02" />
-                  Profile Page
+                  Past Project
                 </a>
               </div>
             </li>
@@ -135,9 +172,10 @@ export default function NavBar() {
               <a
                 className="nav-link btn btn-default d-none d-lg-block"
                 href="javascript:void(0)"
-                onclick="scrollToDownload()"
+                onClick={() => onRouteChange("profile-page")}
+                // onClick="scrollToDownload()"
               >
-                <i className="tim-icons icon-cloud-download-93" /> Download
+                <i className="tim-icons icon-cloud-download-93" /> About Me
               </a>
             </li>
           </ul>
