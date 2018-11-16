@@ -1,4 +1,5 @@
 import React from "react";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 export default function() {
   return (
@@ -14,7 +15,7 @@ export default function() {
             data-dismiss="alert"
             aria-label="Close"
           >
-            <i className="tim-icons icon-simple-remove" />
+            <FontAwesomeIcon icon={['fas','times']} />
           </button>
           <span data-notify="icon" className="tim-icons icon-coins" />
           <span>
@@ -30,7 +31,7 @@ export default function() {
             data-dismiss="alert"
             aria-label="Close"
           >
-            <i className="tim-icons icon-simple-remove" />
+            <FontAwesomeIcon icon={['fas','times-circle']} />
           </button>
           <span data-notify="icon" className="tim-icons icon-trophy" />
           <span>
@@ -46,9 +47,9 @@ export default function() {
             data-dismiss="alert"
             aria-label="Close"
           >
-            <i className="tim-icons icon-simple-remove" />
+            <FontAwesomeIcon icon={['far','times-circle']}/>
           </button>
-          <span data-notify="icon" className="tim-icons icon-bell-55" />
+          <FontAwesomeIcon icon={['far','bell']} />
           <span>
             <b> Well done! - </b> This is a regular notification made with
             ".alert-success"
@@ -62,7 +63,7 @@ export default function() {
             data-dismiss="alert"
             aria-label="Close"
           >
-            <i className="tim-icons icon-simple-remove" />
+            <FontAwesomeIcon icon={['fas','window-close']}/>
           </button>
           <span data-notify="icon" className="tim-icons icon-bulb-63" />
           <span>
@@ -78,7 +79,7 @@ export default function() {
             data-dismiss="alert"
             aria-label="Close"
           >
-            <i className="tim-icons icon-simple-remove" />
+            <FontAwesomeIcon icon={['far','window-close']} />
           </button>
           <span data-notify="icon" className="tim-icons icon-support-17" />
           <span>

@@ -19,7 +19,7 @@ library.add(fab, far, fas, faEnvelopeSquare);
 
 class App extends Component {
   state = {
-    route: "home-page"
+    route: "profile-page"
   };
 
   componentDidMount() {
@@ -62,23 +62,23 @@ class App extends Component {
           <NavBar onRouteChange={onRouteChange} />
           <div className="wrapper">
             <ProfilePage />
-            <Footer />
+            <Footer onRouteChange={onRouteChange}/>
           </div>
         </div>
         ) : route === "project-current" ? (
           <div className="landing-page">
             <NavBar onRouteChange={onRouteChange} />
-            <div className="wrLandingPageer">
+            <div className="wrapper">
               <CurrentProject />
-              <Footer />
+              <Footer onRouteChange={onRouteChange}/>
             </div>
           </div>
         ) : route === "project-past" ? (
           <div className="landing-page">
             <NavBar onRouteChange={onRouteChange} />
-            <div className="wrLandingPageer">
+            <div className="wrapper">
               <PastProject />
-              <Footer />
+              <Footer onRouteChange={onRouteChange}/>
             </div>
           </div>
         ) : route === "home-page" ? (
@@ -86,7 +86,7 @@ class App extends Component {
             <NavBar onRouteChange={onRouteChange} />
             <div className="wrapper">
               <Homepage />
-              <Footer />
+              <Footer onRouteChange={onRouteChange}/>
             </div>
           </div>
         ) : (
@@ -94,7 +94,7 @@ class App extends Component {
             <NavBar onRouteChange={onRouteChange} />
             <div className="wrapper">
               <Homepage />
-              <Footer />
+              <Footer onRouteChange={onRouteChange}/>
             </div>
           </div>
         )}

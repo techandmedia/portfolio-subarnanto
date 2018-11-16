@@ -1,11 +1,13 @@
 import React from "react";
+import path1 from '../../../assets/img/path1.png'
+import path3 from '../../../assets/img/path3.png'
 
 export default function Typo() {
   return (
     // {/* <!-- Typography --> */}
     <div className="section section-typo">
-      <img src="assets/img/path1.png" className="path" />
-      <img src="assets/img/path3.png" className="path path1" />
+      <img src={path1} className="path" />
+      <img src={path3} className="path path1" />
       <div className="container">
         <h3 className="title">Typography</h3>
         <div id="typography">
@@ -13,7 +15,7 @@ export default function Typo() {
             <div className="col-md-12">
               <div className="typography-line">
                 <h1>
-                  <span>Header 1</span>The Life of BLK• Design System{" "}
+                  <span>Header 1</span>The Life of BLK• Design System
                 </h1>
               </div>
               <div className="typography-line">

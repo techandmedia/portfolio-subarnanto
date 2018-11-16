@@ -1,4 +1,5 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function SectionTabs() {
   return (
@@ -25,7 +26,7 @@ export default function SectionTabs() {
                       href="#link1"
                       role="tablist"
                     >
-                      <i className="tim-icons icon-spaceship" /> Profile
+                      <FontAwesomeIcon icon={['fas','user']} style={{marginRight:5}} /> Profile
                     </a>
                   </li>
                   <li className="nav-item">
@@ -35,7 +36,7 @@ export default function SectionTabs() {
                       href="#link2"
                       role="tablist"
                     >
-                      <i className="tim-icons icon-settings-gear-63" /> Settings
+                      <FontAwesomeIcon icon={['fas','cog']} style={{marginRight:5}} /> Settings
                     </a>
                   </li>
                   <li className="nav-item">
@@ -45,7 +46,7 @@ export default function SectionTabs() {
                       href="#link3"
                       role="tablist"
                     >
-                      <i className="tim-icons icon-bag-16" /> Options
+                      <FontAwesomeIcon icon={['fas','user-cog']} style={{marginRight:5}} /> Options
                     </a>
                   </li>
                 </ul>

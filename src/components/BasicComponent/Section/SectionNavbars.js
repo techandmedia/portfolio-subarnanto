@@ -95,12 +95,12 @@ export default function NavBars() {
                 >
                   <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                      <a className="nav-link" href="#pablo">
+                      <a className="nav-link" href="/">
                         <i className="tim-icons icon-send" aria-hidden="true" />
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#pablo">
+                      <a className="nav-link" href="/">
                         <i
                           className="tim-icons icon-single-02"
                           aria-hidden="true"
@@ -157,7 +157,7 @@ export default function NavBars() {
           <nav className="navbar navbar-expand-lg bg-primary">
             <div className="container">
               <div className="navbar-translate">
-                <a className="navbar-br/and" href="#pablo">
+                <a className="navbar-br/and" href="/">
                   Primary color
                 </a>
                 <button
@@ -180,17 +180,17 @@ export default function NavBars() {
               >
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item active">
-                    <a className="nav-link" href="#pablo">
+                    <a className="nav-link" href="/">
                       <i className="tim-icons icon-world" /> Discover
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#pablo">
+                    <a className="nav-link" href="/">
                       <i className="tim-icons icon-single-02" /> Profile
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#pablo">
+                    <a className="nav-link" href="/">
                       <i className="tim-icons icon-settings-gear-63" /> Settings
                     </a>
                   </li>
@@ -203,7 +203,7 @@ export default function NavBars() {
           <nav className="navbar navbar-expand-lg bg-info">
             <div className="container">
               <div className="navbar-translate">
-                <a className="navbar-br/and" href="#pablo">
+                <a className="navbar-br/and" href="/">
                   Info Color
                 </a>
                 <button
@@ -226,17 +226,17 @@ export default function NavBars() {
               >
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item active">
-                    <a className="nav-link" href="#pablo">
+                    <a className="nav-link" href="/">
                       Discover
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#pablo">
+                    <a className="nav-link" href="/">
                       Profile
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#pablo">
+                    <a className="nav-link" href="/">
                       Settings
                     </a>
                   </li>
@@ -272,17 +272,17 @@ export default function NavBars() {
               >
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item active">
-                    <a className="nav-link" href="#pablo">
+                    <a className="nav-link" href="/">
                       <i className="tim-icons icon-world" />
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#pablo">
+                    <a className="nav-link" href="/">
                       <i className="tim-icons icon-single-02" />
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#pablo">
+                    <a className="nav-link" href="/">
                       <i className="tim-icons icon-settings-gear-63" />
                     </a>
                   </li>
@@ -295,7 +295,7 @@ export default function NavBars() {
           <nav className="navbar navbar-expand-lg bg-warning">
             <div className="container">
               <div className="navbar-translate">
-                <a className="navbar-br/and" href="#pablo">
+                <a className="navbar-br/and" href="/">
                   Warning Color
                 </a>
                 <button
@@ -318,22 +318,22 @@ export default function NavBars() {
               >
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
-                    <a className="nav-link" href="#pablo">
+                    <a className="nav-link" href="/">
                       <i className="fab fa-facebook-square" />
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#pablo">
+                    <a className="nav-link" href="/">
                       <i className="fab fa-twitter" />
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#pablo">
+                    <a className="nav-link" href="/">
                       <i className="fab fa-google-plus" />
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#pablo">
+                    <a className="nav-link" href="/">
                       <i className="fab fa-instagram" />
                     </a>
                   </li>
@@ -346,7 +346,7 @@ export default function NavBars() {
           <nav className="navbar navbar-expand-lg bg-danger">
             <div className="container">
               <div className="navbar-translate">
-                <a className="navbar-br/and" href="#pablo">
+                <a className="navbar-br/and" href="/">
                   Danger Color
                 </a>
                 <button
@@ -369,17 +369,17 @@ export default function NavBars() {
               >
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
-                    <a className="nav-link" href="#pablo">
+                    <a className="nav-link" href="/">
                       <i className="fab fa-facebook-square" /> Share
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#pablo">
+                    <a className="nav-link" href="/">
                       <i className="fab fa-twitter" /> Tweet
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#pablo">
+                    <a className="nav-link" href="/">
                       <i className="fab fa-pinterest" /> Pin
                     </a>
                   </li>
@@ -392,7 +392,7 @@ export default function NavBars() {
           <nav className="navbar navbar-expand-lg navbar-transparent">
             <div className="container">
               <div className="navbar-translate">
-                <a className="navbar-br/and" href="#pablo">
+                <a className="navbar-br/and" href="/">
                   Transparent
                 </a>
                 <button
@@ -415,17 +415,17 @@ export default function NavBars() {
               >
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
-                    <a className="nav-link" href="#pablo">
+                    <a className="nav-link" href="/">
                       <i className="fab fa-facebook-square" /> Facebook
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#pablo">
+                    <a className="nav-link" href="/">
                       <i className="fab fa-twitter" /> Twitter
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#pablo">
+                    <a className="nav-link" href="/">
                       <i className="fab fa-instagram" /> Instagram
                     </a>
                   </li>

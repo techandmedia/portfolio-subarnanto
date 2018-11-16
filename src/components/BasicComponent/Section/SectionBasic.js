@@ -1,4 +1,5 @@
 import React from "react";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 export default function() {
   return (
@@ -17,13 +18,13 @@ export default function() {
               Round
             </button>
             <button className="btn btn-primary btn-round" type="button">
-              <i className="tim-icons icon-heart-2" /> With Icon
+              <FontAwesomeIcon icon={['far','heart']} /> With Icon
             </button>
             <button
               className="btn btn-primary btn-icon btn-round"
               type="button"
             >
-              <i className="tim-icons icon-heart-2" />
+              <FontAwesomeIcon icon={['fas','heart']} />
             </button>
             <button
               className="btn btn-primary btn-simple btn-round"
@@ -102,7 +103,7 @@ export default function() {
               <div className="input-group">
                 <div className="input-group-prepend">
                   <span className="input-group-text">
-                    <i className="fa fa-user" />
+                    <FontAwesomeIcon icon={['fas','user']} />
                   </span>
                 </div>
                 <input
@@ -117,11 +118,11 @@ export default function() {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Right Nucleo Icon"
+                  placeholder="Right Icon"
                 />
                 <div className="input-group-append">
                   <span className="input-group-text">
-                    <i className="tim-icons icon-lock-circle" />
+                    <FontAwesomeIcon icon={['fas','lock']} />
                   </span>
                 </div>
               </div>

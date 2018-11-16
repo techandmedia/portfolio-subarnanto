@@ -1,4 +1,5 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import config from "../../data/ConfigData";
 
 export default function NavBar(props) {
@@ -6,20 +7,20 @@ export default function NavBar(props) {
   const { onRouteChange } = props;
   return (
     <nav
-      className="navbar navbar-expand-lg fixed-top navbar-info "
-      color-on-scroll="100"
+      className="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary"
+      // color-on-scroll="100"
+      style={{paddingTop: 10, paddingBottom: 10}}
     >
       <div className="container">
         <div className="navbar-translate">
           <a
-            className="navbar-brand"
-            href="/"
+            className="navbar-brand text-white"
             rel="tooltip"
             title="Build your beautiful website today!"
             data-placement="bottom"
             // target="_blank"
-            style={{ lineHeight: 1 }}
-            // onClick={() => onRouteChange('home-page')}
+            style={{ lineHeight: 1, cursor: "pointer" }}
+            onClick={() => onRouteChange("home-page")}
           >
             <span
               style={{
@@ -67,7 +68,13 @@ export default function NavBar(props) {
               <div className="col-6 collapse-brand">
                 <a
                   className="text-primary"
-                  style={{ fontSize: 18, fontWeight: 400 }}
+                  style={{
+                    position: "absolute",
+                    lineHeight: 0.7,
+                    cursor: "pointer",
+                    fontSize: 18,
+                    fontWeight: 400
+                  }}
                 >
                   <span style={{ textTransform: "lowercase" }}>
                     {websiteName}
@@ -81,6 +88,18 @@ export default function NavBar(props) {
                   >
                     {com}
                   </span>
+                  <br />
+                  <span
+                    style={{
+                      position: "relative",
+                      // marginTop:"-30px",
+                      // lineHeight: 1,
+                      fontSize: 10,
+                      fontWeight: 300
+                    }}
+                  >
+                    {webDescription}
+                  </span>
                 </a>
               </div>
               <div className="col-6 collapse-close text-right">
@@ -93,7 +112,7 @@ export default function NavBar(props) {
                   aria-expanded="false"
                   aria-label="Toggle navigation"
                 >
-                  <i className="tim-icons icon-simple-remove" />
+                  <FontAwesomeIcon icon={["far", "window-close"]} />
                 </button>
               </div>
             </div>
@@ -108,8 +127,18 @@ export default function NavBar(props) {
                 href="https://twitter.com/wsh4and"
                 target="_blank"
               >
-                <i className="fab fa-twitter" />
-                <p className="d-lg-none d-xl-none">Twitter</p>
+                <span>
+                  <FontAwesomeIcon
+                    icon={["fab", "twitter"]}
+                    className="fab text-white"
+                  />
+                  <span
+                    style={{ marginLeft: 10 }}
+                    className="d-lg-none d-xl-none"
+                  >
+                    Twitter
+                  </span>
+                </span>
               </a>
             </li>
             <li className="nav-item p-0">
@@ -121,8 +150,18 @@ export default function NavBar(props) {
                 href={mainURL}
                 target="_blank"
               >
-                <i className="fab fa-facebook-square" />
-                <p className="d-lg-none d-xl-none">Facebook</p>
+                <span>
+                  <FontAwesomeIcon
+                    icon={["fab", "facebook"]}
+                    className="text-white"
+                  />
+                  <span
+                    style={{ marginLeft: 10 }}
+                    className="d-lg-none d-xl-none"
+                  >
+                    Facebook
+                  </span>
+                </span>
               </a>
             </li>
             <li className="nav-item p-0">
@@ -134,8 +173,18 @@ export default function NavBar(props) {
                 href={mainURL}
                 target="_blank"
               >
-                <i className="fab fa-instagram" />
-                <p className="d-lg-none d-xl-none">Instagram</p>
+                <span>
+                  <FontAwesomeIcon
+                    icon={["fab", "instagram"]}
+                    className="text-white"
+                  />
+                  <span
+                    style={{ marginLeft: 10 }}
+                    className="d-lg-none d-xl-none"
+                  >
+                    Instagram
+                  </span>
+                </span>
               </a>
             </li>
             <li className="dropdown nav-item">
@@ -144,17 +193,22 @@ export default function NavBar(props) {
                 className="dropdown-toggle nav-link"
                 data-toggle="dropdown"
               >
-                <i className="fa fa-cogs d-lg-none d-xl-none" /> My Projects
+                <span>
+                  <FontAwesomeIcon
+                    icon={["fas", "project-diagram"]}
+                    className="text-white"
+                  />
+                  <span style={{ marginLeft: 6 }}>My Projects</span>
+                </span>
               </a>
               <div className="dropdown-menu dropdown-with-icons">
-                
                 <a
                   // href="examples/landing-page.html"
                   className="dropdown-item"
                   style={{ cursor: "pointer" }}
                   onClick={() => onRouteChange("project-current")}
                 >
-                  <i className="tim-icons icon-image-02" />
+                  <FontAwesomeIcon icon={['fas','user-astronaut']} style={{marginRight: 15}}/>
                   Current Project
                 </a>
                 <a
@@ -163,19 +217,27 @@ export default function NavBar(props) {
                   style={{ cursor: "pointer" }}
                   onClick={() => onRouteChange("project-past")}
                 >
-                  <i className="tim-icons icon-single-02" />
+                  <FontAwesomeIcon icon={['fas','archive']} style={{marginRight: 15}}/>
                   Past Project
                 </a>
               </div>
             </li>
-            <li className="nav-item">
+            <li className="nav-item p-0">
               <a
-                className="nav-link btn btn-default d-none d-lg-block"
-                href="javascript:void(0)"
+                className="nav-link"
+                style={{cursor:"pointer"}}
+                rel="tooltip"
+                title="Want to know more about me? Click me!"
+                data-placement="bottom"
                 onClick={() => onRouteChange("profile-page")}
-                // onClick="scrollToDownload()"
               >
-                <i className="tim-icons icon-cloud-download-93" /> About Me
+                <span>
+                  <FontAwesomeIcon
+                    icon={["far", "user"]}
+                    className="text-white"
+                  />
+                  <span style={{ marginLeft: 5 }}>About Me</span>
+                </span>
               </a>
             </li>
           </ul>

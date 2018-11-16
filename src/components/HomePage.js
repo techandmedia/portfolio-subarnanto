@@ -36,7 +36,7 @@ export default function Homepage() {
           </div>
         </div>
       </div>
-      <div className="main">
+      {/* <div className="main">
         <SectionBasic />
         <SectionNavbars />
         <SectionTabs />
@@ -50,8 +50,8 @@ export default function Homepage() {
         <SectionDownload />
         <SartModal />
         <MiniModal />
-        <FormModal />
-      </div>
+        <FormModal /> 
+      </div>*/}
     </React.Fragment>
   );
 }

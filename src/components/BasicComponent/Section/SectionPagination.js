@@ -1,4 +1,5 @@
 import React from "react";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 export default function Paginations() {
   return (
@@ -48,17 +49,17 @@ export default function Paginations() {
                   data-toggle="tab"
                   href="#link7"
                 >
-                  <i className="tim-icons icon-atom" /> Home
+                  <FontAwesomeIcon icon={['fas','atom']} style={{marginRight: 5}}/> Home
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" data-toggle="tab" href="#link8">
-                  <i className="tim-icons icon-chat-33" /> Messages
+                  <FontAwesomeIcon icon={['fas','comments']} style={{marginRight: 5}} /> Messages
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" data-toggle="tab" href="#link9">
-                  <i className="tim-icons icon-settings-gear-63" /> Settings
+                <FontAwesomeIcon icon={['fas','cog']} style={{marginRight: 5}} /> Settings
                 </a>
               </li>
             </ul>
