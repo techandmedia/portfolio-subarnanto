@@ -9,7 +9,7 @@ export default function Footer(props) {
       <div className="container">
         <div className="navbar-translate">
           <a className="navbar-br/and" href="https://creative-tim.com/" target="_blank">
-            This beautiful website is brought to you by Creative Tim
+            This website is using BLK Design System from Creative Tim
           </a>
         </div>
         <div

@@ -2,13 +2,17 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import dots from "../../assets/img/dots.png";
 import path4 from "../../assets/img/path4.png";
-import mike from "../../assets/img/mike.jpg";
+import denys from "../../assets/img/denys.jpg";
+import fabien from "../../assets/img/fabien-bazanegue.jpg";
+import mark from "../../assets/img/mark-finn.jpg";
+import andri from "../../assets/img/andri.png";
 
 export default class ProfilePage extends React.Component {
   componentDidMount() {
     // console.log(this.props.route);
   }
   render() {
+    const { onRouteChange } = this.props;
     return (
       <React.Fragment>
         <div class="page-header">
@@ -16,14 +20,23 @@ export default class ProfilePage extends React.Component {
           <img src={path4} class="path" />
           <div class="container align-items-center">
             <div class="row">
-              <div class="col-lg-6 col-md-6">
+              <div
+                class="col-lg-6 col-md-6"
+                style={{ marginBottom: 20, marginTop: -40 }}
+              >
                 <h1 class="profile-title text-left">Eko Andri Subarnanto</h1>
                 <h5 class="text-on-back">01</h5>
+                <p
+                  class="profile-description"
+                  style={{ marginBottom: 30, marginTop: 10 }}
+                >
+                  With almost 20 years of professional working experiences with diverse skills and expertise, I am
+                  considered the Jack of All Trades, and mastering some :).
+                </p>
                 <p class="profile-description">
-                  Offices parties lasting outward nothing age few resolve.
-                  Impression to discretion understood to we interested he
-                  excellence. Him remarkably use projection collecting. Going
-                  about eat forty world has round miles.
+                  This makes me adaptable to any business needs; I am a field
+                  technician and also a manager, I am a instructor but also a
+                  student. I can be whatever the job needs me to be.
                 </p>
                 <div class="btn-wrapper profile pt-3">
                   <a
@@ -66,20 +79,20 @@ export default class ProfilePage extends React.Component {
                 <div class="card card-coin card-plain">
                   <div class="card-header">
                     <img
-                      src={mike}
+                      src={andri}
                       c
                       lass="img-center img-fluid rounded-circle"
                     />
                     <h4 class="title">Face of Me</h4>
                   </div>
                   <div class="card-body">
-                    <ul class="nav nav-tabs nav-tabs-primary justify-content-center">
-                      <li
-                        class="nav-item"
-                        style={{ marginLeft: -10, marginRight: -10 }}
-                      >
+                    <ul
+                      class="nav nav-tabs nav-tabs-primary justify-content-center"
+                      style={{ marginTop: -20 }}
+                    >
+                      <li class="nav-item" style={{ marginLeft: -30 }}>
                         <a
-                          class="nav-link active"
+                          class="nav-link "
                           data-toggle="tab"
                           href="#linka"
                           style={{ fontSize: 12 }}
@@ -92,7 +105,7 @@ export default class ProfilePage extends React.Component {
                         style={{ marginLeft: -10, marginRight: -10 }}
                       >
                         <a
-                          class="nav-link"
+                          class="nav-link active"
                           data-toggle="tab"
                           href="#linkb"
                           style={{ fontSize: 12 }}
@@ -100,10 +113,7 @@ export default class ProfilePage extends React.Component {
                           Skills
                         </a>
                       </li>
-                      <li
-                        class="nav-item"
-                        style={{ marginLeft: -10, marginRight: -10 }}
-                      >
+                      <li class="nav-item" style={{ marginRight: -30 }}>
                         <a
                           class="nav-link"
                           data-toggle="tab"
@@ -115,7 +125,7 @@ export default class ProfilePage extends React.Component {
                       </li>
                     </ul>
                     <div class="tab-content tab-subcategories">
-                      <div class="tab-pane active" id="linka">
+                      <div class="tab-pane " id="linka">
                         <p style={{ fontWeight: 200 }}>
                           Consider by some as intelligently sarcastic, I
                           actually am an introvert who like cheeky and smart
@@ -127,26 +137,31 @@ export default class ProfilePage extends React.Component {
                           />
                         </p>
                       </div>
-                      <div class="tab-pane " id="linkb">
+                      <div class="tab-pane active " id="linkb">
                         <ul
                           style={{
                             listStyle: "none",
                             fontWeight: 100,
-                            fontSize: 11,
-                            marginTop: -20,
+                            fontSize: 13,
                             marginLeft: -40
                           }}
                         >
-                          <li style={{ marginBottom: 5, textAlign: "justify" }}>
+                          <li style={{ textAlign: "justify" }}>
                             <FontAwesomeIcon icon={["fas", "code"]} /> Build
                             functional website and web application with modern
-                            stack such as HTML5, CSS3, JavaScript, ReactJS,
-                            NodeJS, Express and MySQL.
+                            stack & technology such as HTML5, CSS3, JavaScript,
+                            ReactJS, NodeJS, Express and MySQL.
                           </li>
-                          <li style={{ marginBottom: 5, textAlign: "justify" }}>
+                          <li
+                            style={{
+                              marginTop: 15,
+                              marginBottom: 15,
+                              textAlign: "justify"
+                            }}
+                          >
                             <FontAwesomeIcon
                               icon={["fas", "mobile-alt"]}
-                              style={{ marginRight: 10 }}
+                              style={{ marginRight: 15 }}
                             />
                             Capable of creating mobile application with Android
                             (Java) and React Native (JavaScript).
@@ -154,7 +169,7 @@ export default class ProfilePage extends React.Component {
                           <li li style={{ textAlign: "justify" }}>
                             <FontAwesomeIcon
                               icon={["fab", "stack-overflow"]}
-                              style={{ marginRight: 10 }}
+                              style={{ marginRight: 15 }}
                             />
                             Other web stack including PostgreSQL,
                             styled-components, Bootstrap 4 and Ant Design, also
@@ -167,31 +182,44 @@ export default class ProfilePage extends React.Component {
                           style={{
                             listStyle: "none",
                             fontWeight: 100,
-                            fontSize: 11,
-                            marginTop: -20,
+                            fontSize: 13,
                             marginLeft: -40
                           }}
                         >
-                          <li style={{ marginBottom: 5, textAlign: "justify" }}>
-                            <FontAwesomeIcon icon={["fas", "university"]} />{" "}
+                          <li
+                            style={{ marginBottom: 10, textAlign: "justify" }}
+                          >
+                            <FontAwesomeIcon
+                              icon={["fas", "university"]}
+                              style={{ marginRight: 15 }}
+                            />
                             Currently on semester 7 with a GPA of 3.46, taking
-                            System of Information Major at STMIK Swadharma.
+                            System of Information Major at STMIK Swadharma,
+                            Jakarta.
                           </li>
-                          <li style={{ marginBottom: 5, textAlign: "justify" }}>
+                          <li
+                            style={{
+                              marginTop: 15,
+                              marginBottom: 15,
+                              textAlign: "justify"
+                            }}
+                          >
                             <FontAwesomeIcon
                               icon={["fas", "book-open"]}
-                              style={{ marginRight: 10 }}
+                              style={{ marginRight: 15 }}
                             />
-                            Took an advance engineering HP Indigo course at HP
-                            Training Center in Barcelona, Spain.
+                            Took Entry & Advance Engineering HP Indigo Digital
+                            Printing Course at HP Training Center in Barcelona,
+                            Spain.
                           </li>
                           <li li style={{ textAlign: "justify" }}>
                             <FontAwesomeIcon
                               icon={["fas", "laptop-code"]}
-                              style={{ marginRight: 10 }}
+                              style={{ marginRight: 15 }}
                             />
                             Take Udemy courses with various topics such as
-                            React, React Native, Redux, NodeJS, MySQL, PostgreSQL, Photoshop, Digital Marketing, etc.
+                            React, React Native, Redux, NodeJS, MySQL,
+                            PostgreSQL, Photoshop, Digital Marketing, etc.
                           </li>
                         </ul>
                       </div>
@@ -229,31 +257,19 @@ export default class ProfilePage extends React.Component {
                     </ol>
                     <div class="carousel-inner" role="listbox">
                       <div class="carousel-item active">
-                        <img
-                          class="d-block"
-                          src="../assets/img/denys.jpg"
-                          alt="First slide"
-                        />
+                        <img class="d-block" src={denys} alt="First slide" />
                         <div class="carousel-caption d-none d-md-block">
                           <h5>Big City Life, United States</h5>
                         </div>
                       </div>
                       <div class="carousel-item">
-                        <img
-                          class="d-block"
-                          src="../assets/img/fabien-bazanegue.jpg"
-                          alt="Second slide"
-                        />
+                        <img class="d-block" src={fabien} alt="Second slide" />
                         <div class="carousel-caption d-none d-md-block">
                           <h5>Somewhere Beyond, United States</h5>
                         </div>
                       </div>
                       <div class="carousel-item">
-                        <img
-                          class="d-block"
-                          src="../assets/img/mark-finn.jpg"
-                          alt="Third slide"
-                        />
+                        <img class="d-block" src={mark} alt="Third slide" />
                         <div class="carousel-caption d-none d-md-block">
                           <h5>Stocks, United States</h5>
                         </div>
@@ -265,7 +281,7 @@ export default class ProfilePage extends React.Component {
                       role="button"
                       data-slide="prev"
                     >
-                      <i class="tim-icons icon-minimal-left" />
+                      <FontAwesomeIcon icon={["fas", "arrow-left"]} />
                     </a>
                     <a
                       class="carousel-control-next"
@@ -273,7 +289,7 @@ export default class ProfilePage extends React.Component {
                       role="button"
                       data-slide="next"
                     >
-                      <i class="tim-icons icon-minimal-right" />
+                      <FontAwesomeIcon icon={["fas", "arrow-right"]} />
                     </a>
                   </div>
                 </div>
@@ -282,24 +298,23 @@ export default class ProfilePage extends React.Component {
                 <h1 class="profile-title text-left">Projects</h1>
                 <h5 class="text-on-back">02</h5>
                 <p class="profile-description text-left">
-                  An artist of considerable range, Ryan — the name taken by
-                  Melbourne-raised, Brooklyn-based Nick Murphy — writes,
-                  performs and records all of his own music, giving it a warm,
-                  intimate feel with a solid groove structure. An artist of
-                  considerable range.
+                  Currently excited being a web developer, I build a few
+                  projects already in less than one year since I decide to
+                  become a Full Stack Developer. Pictures on the left (or above
+                  if you are on mobile) are not mine; they are there because the
+                  pictures are gorgeous. Head over to the projects section to
+                  see what I've been building on.
                 </p>
                 <div class="btn-wrapper pt-3">
                   <button
-                    href="javascript:void(0)"
-                    class="btn btn-simple btn-primary"
-                  >
-                    <i class="tim-icons icon-book-bookmark" /> Bookmark
-                  </button>
-                  <button
-                    href="javascript:void(0)"
+                    onClick={() => onRouteChange("project-current")}
                     class="btn btn-simple btn-info"
                   >
-                    <i class="tim-icons icon-bulb-63" /> Check it!
+                    <FontAwesomeIcon
+                      icon={["fas", "tasks"]}
+                      style={{ marginRight: 10 }}
+                    />{" "}
+                    Check it!
                   </button>
                 </div>
               </div>
@@ -324,7 +339,7 @@ export default class ProfilePage extends React.Component {
                             <input
                               type="text"
                               class="form-control"
-                              value="Mike"
+                              placeholder="Eko Andri"
                             />
                           </div>
                         </div>
@@ -334,7 +349,7 @@ export default class ProfilePage extends React.Component {
                             <input
                               type="email"
                               class="form-control"
-                              placeholder="mike@email.com"
+                              placeholder="anyemail@email.com"
                             />
                           </div>
                         </div>
@@ -346,7 +361,7 @@ export default class ProfilePage extends React.Component {
                             <input
                               type="text"
                               class="form-control"
-                              value="001-12321345"
+                              placeholder="62-8117011090"
                             />
                           </div>
                         </div>
@@ -356,7 +371,7 @@ export default class ProfilePage extends React.Component {
                             <input
                               type="text"
                               class="form-control"
-                              value="CreativeTim"
+                              placeholder="subarnanto.com"
                             />
                           </div>
                         </div>
@@ -368,7 +383,7 @@ export default class ProfilePage extends React.Component {
                             <input
                               type="text"
                               class="form-control"
-                              placeholder="Hello there!"
+                              placeholder="Hi there, sorry this feature isn't working yet, text me to get further information"
                             />
                           </div>
                         </div>
@@ -389,29 +404,37 @@ export default class ProfilePage extends React.Component {
               <div class="col-md-4 ml-auto">
                 <div class="info info-horizontal">
                   <div class="icon icon-primary">
-                    <i class="tim-icons icon-square-pin" />
+                    <FontAwesomeIcon
+                      icon={["fas", "map-pin"]}
+                      style={{ marginTop: 8 }}
+                    />
                   </div>
                   <div class="description">
-                    <h4 class="info-title">Find us at the office</h4>
+                    <h4 class="info-title">Find me at school at</h4>
                     <p>
-                      {" "}
-                      Bld Mihail Kogalniceanu, nr. 8,
-                      <br /> 7652 Bucharest,
-                      <br /> Romania
+                      <span style={{ fontWeight: 700, fontSize: 14 }}>
+                        STMIK Swadharma
+                      </span>
+                      <br /> Jl. Malaka No.3 Jakarta,
+                      <br /> Indonesia
                     </p>
                   </div>
                 </div>
                 <div class="info info-horizontal">
                   <div class="icon icon-primary">
-                    <i class="tim-icons icon-mobile" />
+                    <FontAwesomeIcon
+                      icon={["fas", "mobile"]}
+                      style={{ marginTop: 8 }}
+                    />
                   </div>
                   <div class="description">
-                    <h4 class="info-title">Give us a ring</h4>
+                    <h4 class="info-title">Or contact me directly</h4>
                     <p>
-                      {" "}
-                      Michael Jordan
-                      <br /> +40 762 321 762
-                      <br /> Mon - Fri, 8:00-22:00
+                    <span style={{ fontWeight: 700, fontSize: 14 }}>
+                        Andri
+                      </span>
+                      <br /> +62 811 7011 090
+                      <br /> Mon - Fri, 8:00-21:00
                     </p>
                   </div>
                 </div>

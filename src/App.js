@@ -61,7 +61,7 @@ class App extends Component {
           <div className="profile-page">
           <NavBar onRouteChange={onRouteChange} />
           <div className="wrapper">
-            <ProfilePage />
+            <ProfilePage onRouteChange={onRouteChange}/>
             <Footer onRouteChange={onRouteChange}/>
           </div>
         </div>

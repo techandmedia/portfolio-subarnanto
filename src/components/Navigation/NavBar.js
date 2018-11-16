@@ -236,7 +236,7 @@ export default function NavBar(props) {
                     icon={["far", "user"]}
                     className="text-white"
                   />
-                  <span style={{ marginLeft: 5 }}>About Me</span>
+                  <span style={{ marginLeft: 7 }}>About Me</span>
                 </span>
               </a>
             </li>
