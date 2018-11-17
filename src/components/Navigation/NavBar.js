@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import config from "../../data/ConfigData";
 
 export default function NavBar(props) {
-  const { com, mainURL, websiteName, webDescription } = config;
+  const { com, websiteName, webDescription } = config;
   const { onRouteChange } = props;
   return (
     <nav
@@ -13,12 +13,12 @@ export default function NavBar(props) {
     >
       <div className="container">
         <div className="navbar-translate">
+        {/* eslint-disable-next-line */}
           <a
             className="navbar-brand text-white"
             rel="tooltip"
             title="Build your beautiful website today!"
             data-placement="bottom"
-            // target="_blank"
             style={{ lineHeight: 1, cursor: "pointer" }}
             onClick={() => onRouteChange("home-page")}
           >
@@ -68,6 +68,7 @@ export default function NavBar(props) {
               <div className="col-6 collapse-brand">
                 <a
                   className="text-primary"
+                  href="/"
                   style={{
                     position: "absolute",
                     lineHeight: 0.7,
@@ -119,10 +120,11 @@ export default function NavBar(props) {
           </div>
           <ul className="navbar-nav">
             <li className="nav-item p-0">
+            {/* eslint-disable-next-line */}
               <a
                 className="nav-link"
-                rel="tooltip"
-                title="Follow us on Twitter"
+                rel="tooltip noopener noreferrer"
+                title="Twitter"
                 data-placement="bottom"
                 href="https://twitter.com/wsh4and"
                 target="_blank"
@@ -142,52 +144,55 @@ export default function NavBar(props) {
               </a>
             </li>
             <li className="nav-item p-0">
+            {/* eslint-disable-next-line */}
               <a
                 className="nav-link"
-                rel="tooltip"
-                title="Like us on Facebook"
+                rel="tooltip noopener noreferrer"
+                title="Github"
                 data-placement="bottom"
-                href={mainURL}
+                href="https://github.com/techandmedia"
                 target="_blank"
               >
                 <span>
                   <FontAwesomeIcon
-                    icon={["fab", "facebook"]}
+                    icon={["fab", 'github']}
                     className="text-white"
                   />
                   <span
                     style={{ marginLeft: 10 }}
                     className="d-lg-none d-xl-none"
                   >
-                    Facebook
+                    Github
                   </span>
                 </span>
               </a>
             </li>
             <li className="nav-item p-0">
+            {/* eslint-disable-next-line */}
               <a
                 className="nav-link"
-                rel="tooltip"
-                title="Follow us on Instagram"
+                rel="tooltip noopener noreferrer"
+                title="Linkdin"
                 data-placement="bottom"
-                href={mainURL}
-                target="_blank"
+                href="https://www.linkedin.com/in/eko-andri-subarnanto/"
               >
                 <span>
                   <FontAwesomeIcon
-                    icon={["fab", "instagram"]}
+                    icon={["fab", 'linkedin']}
                     className="text-white"
                   />
                   <span
                     style={{ marginLeft: 10 }}
                     className="d-lg-none d-xl-none"
                   >
-                    Instagram
+                    LinkdIn
                   </span>
                 </span>
               </a>
             </li>
             <li className="dropdown nav-item">
+            {/* <button className="btn btn-link">Default</button> */}
+            {/* eslint-disable-next-line */}
               <a
                 href="#"
                 className="dropdown-toggle nav-link"
@@ -202,6 +207,7 @@ export default function NavBar(props) {
                 </span>
               </a>
               <div className="dropdown-menu dropdown-with-icons">
+              {/* eslint-disable-next-line */}
                 <a
                   // href="examples/landing-page.html"
                   className="dropdown-item"
@@ -211,6 +217,7 @@ export default function NavBar(props) {
                   <FontAwesomeIcon icon={['fas','user-astronaut']} style={{marginRight: 15}}/>
                   Current Project
                 </a>
+                {/* eslint-disable-next-line */}
                 <a
                   // href="examples/profile-page.html"
                   className="dropdown-item"
@@ -223,6 +230,7 @@ export default function NavBar(props) {
               </div>
             </li>
             <li className="nav-item p-0">
+            {/* eslint-disable-next-line */}
               <a
                 className="nav-link"
                 style={{cursor:"pointer"}}

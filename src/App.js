@@ -19,12 +19,12 @@ library.add(fab, far, fas, faEnvelopeSquare);
 
 class App extends Component {
   state = {
-    route: "profile-page"
+    route: "home-page"
   };
 
-  componentDidMount() {
-    console.log("app", this.state.route);
-  }
+  // componentDidMount() {
+  //   console.log("app", this.state.route);
+  // }
 
   onRouteChange = route => {
     if (route === "profile-page") {
@@ -32,7 +32,7 @@ class App extends Component {
     } else if (route === "landing-page") {
       this.setState({ route: route });
     }
-    this.setState({ route: route });
+    this.setState({ route });
   };
 
   // handleClick = e => {
@@ -66,7 +66,7 @@ class App extends Component {
           </div>
         </div>
         ) : route === "project-current" ? (
-          <div className="landing-page">
+          <div className="profile-page">
             <NavBar onRouteChange={onRouteChange} />
             <div className="wrapper">
               <CurrentProject />

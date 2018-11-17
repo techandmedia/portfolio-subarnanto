@@ -2,14 +2,19 @@ import React from "react";
 import config from "../../data/ConfigData";
 
 export default function Footer(props) {
-  const { com, mainURL, websiteName, webDescription } = config;
+  const { com, websiteName, webDescription } = config;
   const { onRouteChange } = props;
   return (
     <nav className="navbar navbar-expand-lg navbar-transparent">
       <div className="container">
         <div className="navbar-translate">
-          <a className="navbar-br/and" href="https://creative-tim.com/" target="_blank">
-            This website is using BLK Design System from Creative Tim
+          <a
+            className="navbar-br/and"
+            href="https://creative-tim.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            BLK Design System by Creative Tim
           </a>
         </div>
         <div
@@ -18,7 +23,7 @@ export default function Footer(props) {
         >
           <div className="navbar-nav ml-auto">
             <div className="nav-item">
-              <a
+              <span
                 className="navbar-brand text-primary"
                 rel="tooltip"
                 title="Build your beautiful website today!"
@@ -49,7 +54,7 @@ export default function Footer(props) {
                 <span style={{ fontSize: 13, fontWeight: 300 }}>
                   {webDescription}
                 </span>
-              </a>
+              </span>
             </div>
           </div>
         </div>
