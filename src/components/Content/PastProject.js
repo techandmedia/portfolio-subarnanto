@@ -1,4 +1,8 @@
 import React from "react";
+// import Button from 'react-bootstrap/lib/Button';
+
+// or less ideally
+// import { Button } from "react-bootstrap";
 // import SectionNotifications from "../BasicComponent/Section/SectionNotifications";
 
 import blob from "../../assets/img/blob.png";
@@ -29,8 +33,11 @@ export default function CurrentProject() {
             </p>
             {/* </div> */}
           </div>
+          {/* <Button>Test</Button> */}
         </div>
       </div>
+      <br />
+      <br />
       {/* <SectionNotifications /> */}
     </React.Fragment>
   );

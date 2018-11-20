@@ -1,4 +1,5 @@
 import React from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import config from "../../data/ConfigData";
 
@@ -7,15 +8,15 @@ export default function NavBar(props) {
   const { onRouteChange } = props;
   return (
     <nav
-      className="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary"
-      // color-on-scroll="100"
-      style={{paddingTop: 10, paddingBottom: 10}}
+      className="navbar navbar-expand-lg fixed-top navbar-transparent "
+      color-on-scroll="100"
+      style={{ paddingTop: 10, paddingBottom: 10 }}
     >
       <div className="container">
         <div className="navbar-translate">
-        {/* eslint-disable-next-line */}
+          {/* eslint-disable-next-line */}
           <a
-            className="navbar-brand text-white"
+            className="navbar-brand"
             rel="tooltip"
             title="Build your beautiful website today!"
             data-placement="bottom"
@@ -113,14 +114,16 @@ export default function NavBar(props) {
                   aria-expanded="false"
                   aria-label="Toggle navigation"
                 >
-                  <FontAwesomeIcon icon={["far", "window-close"]} />
+                  <FontAwesomeIcon
+                    icon={["far", "window-close"]}
+                    style={{ color: "white" }}
+                  />
                 </button>
               </div>
             </div>
           </div>
           <ul className="navbar-nav">
             <li className="nav-item p-0">
-            {/* eslint-disable-next-line */}
               <a
                 className="nav-link"
                 rel="tooltip noopener noreferrer"
@@ -144,7 +147,6 @@ export default function NavBar(props) {
               </a>
             </li>
             <li className="nav-item p-0">
-            {/* eslint-disable-next-line */}
               <a
                 className="nav-link"
                 rel="tooltip noopener noreferrer"
@@ -155,7 +157,7 @@ export default function NavBar(props) {
               >
                 <span>
                   <FontAwesomeIcon
-                    icon={["fab", 'github']}
+                    icon={["fab", "github"]}
                     className="text-white"
                   />
                   <span
@@ -168,7 +170,6 @@ export default function NavBar(props) {
               </a>
             </li>
             <li className="nav-item p-0">
-            {/* eslint-disable-next-line */}
               <a
                 className="nav-link"
                 rel="tooltip noopener noreferrer"
@@ -178,7 +179,7 @@ export default function NavBar(props) {
               >
                 <span>
                   <FontAwesomeIcon
-                    icon={["fab", 'linkedin']}
+                    icon={["fab", "linkedin"]}
                     className="text-white"
                   />
                   <span
@@ -190,15 +191,14 @@ export default function NavBar(props) {
                 </span>
               </a>
             </li>
+
             <li className="dropdown nav-item">
-            {/* <button className="btn btn-link">Default</button> */}
-            {/* eslint-disable-next-line */}
               <a
                 href="#"
                 className="dropdown-toggle nav-link"
                 data-toggle="dropdown"
               >
-                <span>
+                <span d-lg-none d-xl-none>
                   <FontAwesomeIcon
                     icon={["fas", "project-diagram"]}
                     className="text-white"
@@ -207,14 +207,17 @@ export default function NavBar(props) {
                 </span>
               </a>
               <div className="dropdown-menu dropdown-with-icons">
-              {/* eslint-disable-next-line */}
+                {/* eslint-disable-next-line */}
                 <a
-                  // href="examples/landing-page.html"
+                  // href="current-project"
                   className="dropdown-item"
                   style={{ cursor: "pointer" }}
                   onClick={() => onRouteChange("project-current")}
                 >
-                  <FontAwesomeIcon icon={['fas','user-astronaut']} style={{marginRight: 15}}/>
+                  <FontAwesomeIcon
+                    icon={["fas", "user-astronaut"]}
+                    style={{ marginRight: 15 }}
+                  />
                   Current Project
                 </a>
                 {/* eslint-disable-next-line */}
@@ -224,16 +227,19 @@ export default function NavBar(props) {
                   style={{ cursor: "pointer" }}
                   onClick={() => onRouteChange("project-past")}
                 >
-                  <FontAwesomeIcon icon={['fas','archive']} style={{marginRight: 15}}/>
+                  <FontAwesomeIcon
+                    icon={["fas", "archive"]}
+                    style={{ marginRight: 15 }}
+                  />
                   Past Project
                 </a>
               </div>
             </li>
             <li className="nav-item p-0">
-            {/* eslint-disable-next-line */}
+              {/* eslint-disable-next-line */}
               <a
                 className="nav-link"
-                style={{cursor:"pointer"}}
+                style={{ cursor: "pointer" }}
                 rel="tooltip"
                 title="Want to know more about me? Click me!"
                 data-placement="bottom"

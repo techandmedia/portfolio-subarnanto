@@ -1,20 +1,5 @@
 import React from "react";
 
-// import SectionBasic from "./BasicComponent/Section/SectionBasic";
-// import SectionNavbars from "./BasicComponent/Section/SectionNavbars";
-// import SectionTabs from "./BasicComponent/Section/SectionTabs";
-// import SectionPagination from "./BasicComponent/Section/SectionPagination";
-// import SectionNotification from "./BasicComponent/Section/SectionNotifications";
-// import SectionTypo from "./BasicComponent/Section/SectionTyphography";
-// import SectionJavascript from "./BasicComponent/Section/SectionJavascript";
-// import SectionNucleon from "./BasicComponent/Section/SectionNucleon";
-// import SectionSignUp from "./BasicComponent/Section/SectionSignUp";
-// import SectionExamples from "./BasicComponent/Section/SectionExamples";
-// import SectionDownload from "./BasicComponent/Section/SectionDownload";
-// import SartModal from "./BasicComponent/Modal/SartModal";
-// import MiniModal from "./BasicComponent/Modal/MiniModal";
-// import FormModal from "./BasicComponent/Modal/FormModal";
-
 export default function Homepage() {
   return (
     <React.Fragment>
@@ -37,22 +22,6 @@ export default function Homepage() {
           </div>
         </div>
       </div>
-      {/* <div className="main">
-        <SectionBasic />
-        <SectionNavbars />
-        <SectionTabs />
-        <SectionPagination />
-        <SectionNotification />
-        <SectionTypo />
-        <SectionJavascript />
-        <SectionNucleon />
-        <SectionSignUp />
-        <SectionExamples />
-        <SectionDownload />
-        <SartModal />
-        <MiniModal />
-        <FormModal /> 
-      </div>*/}
     </React.Fragment>
   );
 }

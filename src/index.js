@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-// import './index.css'
-// import './assets/css/blk-design-system.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
+import './assets/css/blk-design-bootstrap.css';
+// import NavBar from './components/Navigation/NavBar'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

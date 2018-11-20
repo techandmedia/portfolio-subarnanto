@@ -4,12 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import blob from "../../assets/img/blob.png";
 import triunghiuri from "../../assets/img/triunghiuri.png";
 import waves from "../../assets/img/waves.png";
-import patrat from "../../assets/img/patrat.png";
 import cercuri from "../../assets/img/cercuri.png";
-import ss from '../../assets/img/Screenshot (1).png'
-import ss1 from '../../assets/img/Screenshot (8).png'
-import ss2 from '../../assets/img/Screenshot (9).png'
-import ss3 from '../../assets/img/Screenshot (20).png'
+import ss from "../../assets/img/Screenshot (1).png";
+import ss1 from "../../assets/img/Screenshot (8).png";
+import ss2 from "../../assets/img/Screenshot (9).png";
+import ss3 from "../../assets/img/Screenshot (20).png";
 
 export default function CurrentProject() {
   return (
@@ -18,7 +17,6 @@ export default function CurrentProject() {
         <img src={blob} className="path" alt="Placeholder" />
         <img src={triunghiuri} className="shapes triangle" alt="Placeholder" />
         <img src={waves} className="shapes wave" alt="Placeholder" />
-        <img src={patrat} className="shapes squares" alt="Placeholder" />
         <img src={cercuri} className="shapes circle" alt="Placeholder" />
         <div className="container align-items-center">
           <div className="row">
@@ -58,6 +56,7 @@ export default function CurrentProject() {
                 </blockquote>
               </div>
             </div>
+
             <div className="col-lg-4 col-md-6 ml-auto mr-auto">
               <div
                 className="card card-coin card-plain"
@@ -189,7 +188,7 @@ export default function CurrentProject() {
                             icon={["fas", "dot-circle"]}
                             style={{ marginRight: 15 }}
                           />
-                          Application Server: NodeJS
+                          Application Server:
                           <a
                             href="https://nodejs.org/en/"
                             target="_blank"
@@ -225,15 +224,16 @@ export default function CurrentProject() {
                             marginBottom: 15
                           }}
                         >
-                        
                           <FontAwesomeIcon
                             icon={["fas", "dot-circle"]}
                             style={{ marginRight: 15 }}
                           />
                           Middleware:
                           {/* eslint-disable-next-line */}
-                          <a href="#" style={{ marginLeft: 10 }}>
-                            Cors, Bcrypt
+                          <a href="https://www.npmjs.com/package/cors" style={{ marginLeft: 10 }}>
+                            Cors,
+                          </a><a href="https://www.npmjs.com/package/bcrypt" style={{ marginLeft: 5 }}>
+                            Bcrypt
                           </a>
                           (upcoming)
                         </li>
@@ -301,7 +301,7 @@ export default function CurrentProject() {
                       data-target="#carouselExampleIndicators"
                       data-slide-to="2"
                     />
-                     <li
+                    <li
                       data-target="#carouselExampleIndicators"
                       data-slide-to="3"
                     />
@@ -314,11 +314,7 @@ export default function CurrentProject() {
                       </div>
                     </div>
                     <div className="carousel-item">
-                      <img
-                        className="d-block"
-                        src={ss1}
-                        alt="Second slide"
-                      />
+                      <img className="d-block" src={ss1} alt="Second slide" />
                       <div className="carousel-caption d-none d-md-block">
                         <h5>Somewhere Beyond, United States</h5>
                       </div>
@@ -360,7 +356,8 @@ export default function CurrentProject() {
               <h5 className="text-on-back">02</h5>
               <p className="profile-description text-left">
                 This project currently on active development, now on version
-                0.2, so many things and features have been added. Head over to the link below and try the app yourself.
+                0.2, so many things and features have been added. Head over to
+                the link below and try the app yourself.
               </p>
               <div className="btn-wrapper pt-3">
                 <a
