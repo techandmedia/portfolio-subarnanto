@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 // import 'bootstrap/dist/css/bootstrap.min.css'
-import './assets/css/blk-design-bootstrap.css';
+import './assets/css/bootstrap-blk-design.css';
 // import NavBar from './components/Navigation/NavBar'
 
 ReactDOM.render(<App />, document.getElementById('root'));

@@ -10,6 +10,7 @@ import NavBar from "./components/Navigation/NavBar";
 import Footer from "./components/Navigation/Footer";
 // import NavBar from "./components/Navigation/NavBar2";
 // import NavBar from "./components/Navigation/NavBar3";
+// import NavBar2 from "./components/Navigation/NavBar4";
 
 // Content
 import Homepage from "./components/HomePage";
@@ -21,7 +22,7 @@ library.add(fab, far, fas, faEnvelopeSquare);
 
 class App extends Component {
   state = {
-    route: "profile-page"
+    route: "home-page"
   };
 
   // componentDidMount() {
@@ -75,8 +76,7 @@ class App extends Component {
           </div>
         ) : route === "project-current" ? (
           <div className="profile-page">
-            <NavBar onRouteChange={onRouteChange} />
-            {/* <NavBar2 onRouteChange={onRouteChange} /> */}
+            {/* <NavBar onRouteChange={onRouteChange} /> */}
             <div className="wrapper">
               <CurrentProject />
               <Footer onRouteChange={onRouteChange} />
@@ -85,7 +85,6 @@ class App extends Component {
         ) : route === "project-past" ? (
           <div className="landing-page">
             <NavBar onRouteChange={onRouteChange} />
-            {/* <NavBar2 onRouteChange={onRouteChange} /> */}
             <div className="wrapper">
               <PastProject />
               <Footer onRouteChange={onRouteChange} />
@@ -94,7 +93,6 @@ class App extends Component {
         ) : route === "home-page" ? (
           <div className="index-page">
             <NavBar onRouteChange={onRouteChange} />
-            {/* <NavBar3 onRouteChange={onRouteChange} /> */}
             <div className="wrapper">
               <Homepage />
               <Footer onRouteChange={onRouteChange} />
@@ -104,7 +102,6 @@ class App extends Component {
           <div className="index-page">
             <NavBar onRouteChange={onRouteChange} />
             <div className="wrapper">
-              {/* <NavBar2 onRouteChange={onRouteChange} /> */}
               <Homepage />
               <Footer onRouteChange={onRouteChange} />
             </div>
