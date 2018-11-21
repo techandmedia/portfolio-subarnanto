@@ -8,17 +8,23 @@ export default class Example extends React.Component {
     super(props);
     this.state = {
       isOpen: false,
-      collapse: "collapse"
+      collapse: "collapse",
+      dropdownMenu: "dropdown-menu"
     };
   }
 
-  toggle = (a) => {
+  toggleCollapse = (a) => {
     this.setState({
-      // isOpen: !this.state.isOpen,
       collapse: a
     });
   }
 
+  toggleDropdown = () => {
+    this.setState({
+      dropdownMenu: null
+    });
+  }
+  
   // componentDidMount(){
   //   console.log('collapse is',this.state.collapse)
   // }
@@ -74,7 +80,7 @@ export default class Example extends React.Component {
               aria-controls="navigation-index"
               aria-expanded="true"
               aria-label="Toggle navigation"
-              onClick={()=> this.toggle(null)}
+              onClick={()=> this.toggleCollapse(null)}
             >
               <span className="navbar-toggler-bar bar1" />
               <span className="navbar-toggler-bar bar2" />
@@ -134,7 +140,7 @@ export default class Example extends React.Component {
                     aria-controls="navigation-index"
                     aria-expanded="true"
                     aria-label="Toggle navigation"
-                    onClick={()=>this.toggle("collapse")}
+                    onClick={()=>this.toggleCollapse("collapse")}
                   >
                     <FontAwesomeIcon
                       icon={["far", "window-close"]}
@@ -216,9 +222,11 @@ export default class Example extends React.Component {
 
               <li className="dropdown nav-item">
                 <span
-                  href="#"
+                  // href="#"
                   className="dropdown-toggle nav-link"
                   data-toggle="dropdown"
+                  onClick={()=> this.toggleDropdown()}
+                  style={{ cursor: "pointer" }}
                 >
                   <span d-lg-none d-xl-none>
                     <FontAwesomeIcon
@@ -228,7 +236,7 @@ export default class Example extends React.Component {
                     <span style={{ marginLeft: 6 }}>My Projects</span>
                   </span>
                 </span>
-                <div className=" dropdown-with-icons">
+                <div className={`${this.state.dropdownMenu} `}>
                   {/* eslint-disable-next-line */}
                   <a
                     // href="current-project"
