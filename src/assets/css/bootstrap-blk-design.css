@@ -4,7 +4,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
- /*
+/*
  =========================================================
  * Blk• Design System - v1.0.0
  =========================================================
@@ -16,7 +16,7 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 /* A modified css from Bootstrap & BLK• Design System combined */
-@import"https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800";
+@import "https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800";
 
 @keyframes move-left-right {
   0% {
@@ -68,7 +68,7 @@
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
-  }
+}
 
 *,
 *::before,
@@ -4185,56 +4185,56 @@ input[type="button"].btn-block {
 }
 
 .custom-checkbox
-.custom-control-input:indeterminate
-~ .custom-control-label::after {
-background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%23ffffff' d='M0 2h4'/%3E%3C/svg%3E");
+  .custom-control-input:indeterminate
+  ~ .custom-control-label::after {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%23ffffff' d='M0 2h4'/%3E%3C/svg%3E");
 }
 
 .custom-checkbox
-.custom-control-input:disabled:checked
-~ .custom-control-label::before {
-background-color: rgba(225, 78, 202, 0.5);
+  .custom-control-input:disabled:checked
+  ~ .custom-control-label::before {
+  background-color: rgba(225, 78, 202, 0.5);
 }
 
 .custom-checkbox
-.custom-control-input:disabled:indeterminate
-~ .custom-control-label::before {
-background-color: rgba(225, 78, 202, 0.5);
+  .custom-control-input:disabled:indeterminate
+  ~ .custom-control-label::before {
+  background-color: rgba(225, 78, 202, 0.5);
 }
 
 .custom-radio .custom-control-label::before {
-border-radius: 50%;
+  border-radius: 50%;
 }
 
 .custom-radio .custom-control-input:checked ~ .custom-control-label::before {
-background-color: #e14eca;
+  background-color: #e14eca;
 }
 
 .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
-background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23ffffff'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23ffffff'/%3E%3C/svg%3E");
 }
 
 .custom-radio
-.custom-control-input:disabled:checked
-~ .custom-control-label::before {
-background-color: rgba(225, 78, 202, 0.5);
+  .custom-control-input:disabled:checked
+  ~ .custom-control-label::before {
+  background-color: rgba(225, 78, 202, 0.5);
 }
 
 .custom-select {
-display: inline-block;
-width: 100%;
-height: calc(2.25rem + 2px);
-padding: 0.375rem 1.75rem 0.375rem 0.75rem;
-line-height: 1.428571;
-color: rgba(255, 255, 255, 0.8);
-vertical-align: middle;
-background: transparent
-  url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%2332325d' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E")
-  no-repeat right 0.75rem center;
-background-size: 8px 10px;
-border: 1px solid #cad1d7;
-border-radius: 0.25rem;
-box-shadow: inset 0 1px 2px rgba(34, 42, 66, 0.075);
+  display: inline-block;
+  width: 100%;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  line-height: 1.428571;
+  color: rgba(255, 255, 255, 0.8);
+  vertical-align: middle;
+  background: transparent
+    url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%2332325d' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E")
+    no-repeat right 0.75rem center;
+  background-size: 8px 10px;
+  border: 1px solid #cad1d7;
+  border-radius: 0.25rem;
+  box-shadow: inset 0 1px 2px rgba(34, 42, 66, 0.075);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -4632,7 +4632,7 @@ box-shadow: inset 0 1px 2px rgba(34, 42, 66, 0.075);
   display: inline-block;
   padding-top: 0.406813rem;
   padding-bottom: 0.406813rem;
-  margin-right: 0.9375rem;
+  margin-left: 0.5rem;
   font-size: 0.99925rem;
   line-height: inherit;
   white-space: nowrap;
@@ -4706,6 +4706,10 @@ box-shadow: inset 0 1px 2px rgba(34, 42, 66, 0.075);
   background-size: 100% 100%;
 }
 
+.navbar-right-menu {
+  margin-right: 0.5rem;
+}
+
 @media (max-width: 575.98px) {
   .navbar-expand-sm > .container,
   .navbar-expand-sm > .container-fluid {
@@ -4715,6 +4719,12 @@ box-shadow: inset 0 1px 2px rgba(34, 42, 66, 0.075);
 }
 
 @media (min-width: 576px) {
+  .navbar-right-menu {
+    margin-right: 2rem;
+  }
+  .navbar-brand {
+    margin-left: 2em;
+  }
   .navbar-expand-sm {
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
@@ -4757,6 +4767,12 @@ box-shadow: inset 0 1px 2px rgba(34, 42, 66, 0.075);
 }
 
 @media (min-width: 768px) {
+  .navbar-right-menu {
+    margin-right: 6rem;
+  }
+  .navbar-brand {
+    margin-left: 6em;
+  }
   .navbar-expand-md {
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
@@ -4951,7 +4967,6 @@ box-shadow: inset 0 1px 2px rgba(34, 42, 66, 0.075);
   color: rgba(34, 42, 66, 0.5);
   border-color: transparent;
 }
-
 
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -10688,9 +10703,6 @@ a.text-darker:focus {
   background-color: #2a2f63 !important;
 }
 
-
-
-
 .index-page .page-header {
   height: 100vh;
 }
@@ -10706,7 +10718,6 @@ a.text-darker:focus {
 .index-page .page-header .container > .content-center.brand h3 span {
   font-weight: 600;
 }
-
 
 .index-page .page-header .category-absolute {
   position: absolute;
@@ -11174,7 +11185,6 @@ a.text-darker:focus {
   background-size: contain;
 }
 
-
 @media (max-width: 575.98px) {
   .card-login {
     margin-top: 100px;
@@ -11189,7 +11199,6 @@ a.text-darker:focus {
     margin-top: 100px;
   }
 }
-
 
 .section-image .container {
   z-index: 2;
@@ -11299,7 +11308,6 @@ a.text-darker:focus {
   }
 }
 
-
 .page-header .carousel .carousel-indicators {
   bottom: 60px;
 }
@@ -11371,4 +11379,104 @@ a.text-darker:focus {
 
 .wrapper .navbar {
   z-index: 2;
+}
+
+.register-page {
+  background-color: #171941;
+}
+
+.register-page .link {
+  font-size: 10px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.register-page .register-bg {
+  height: 700px;
+  background: linear-gradient(to bottom, transparent 0%, #1f2251 100%);
+  width: 700px;
+  position: relative;
+  right: -600px;
+  top: -750px;
+  border-radius: 20%;
+  transform: rotate(-15deg);
+}
+
+.register-page .square {
+  position: absolute;
+  transition: 0.5s ease-out;
+  border-radius: 2px;
+  background-size: 100%;
+  border-radius: 20%;
+}
+
+.register-page .square-1 {
+  height: 300px;
+  width: 300px;
+  background-image: url("../../assets/img/square1.png");
+  top: 175px;
+  right: 150px;
+  opacity: 0.8;
+}
+
+.register-page .square-2 {
+  height: 120px;
+  width: 120px;
+  background-image: url("../../assets/img/square2.png");
+  opacity: 0.9;
+  top: 310px;
+  right: 390px;
+}
+
+.register-page .square-3 {
+  width: 200px;
+  height: 200px;
+  background-image: url("../../assets/img/square3.png");
+  opacity: 0.3;
+  top: -50px;
+  right: 400px;
+}
+
+.register-page .square-4 {
+  height: 200px;
+  width: 200px;
+  background-image: url("../../assets/img/square4.png");
+  right: -50px;
+  top: 525px;
+}
+
+.register-page .square-5 {
+  height: 150px;
+  width: 150px;
+  background-image: url("../../assets/img/square5.png");
+  opacity: 0.5;
+  top: 500px;
+  right: 470px;
+}
+
+.register-page .square-6 {
+  height: 70px;
+  width: 70px;
+  background-image: url("../../assets/img/square5.png");
+  opacity: 0.9;
+  top: 105px;
+  right: 20px;
+}
+
+.register-page .square-7 {
+  height: 200px;
+  width: 200px;
+  background-image: url("../../assets/img/square5.png");
+  left: -100px;
+  top: 100px;
+  opacity: 0.4;
+}
+
+.register-page .square-8 {
+  height: 100px;
+  width: 100px;
+  background-image: url("../../assets/img/square1.png");
+  left: 300px;
+  top: 400px;
+  opacity: 0.4;
 }
