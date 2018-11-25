@@ -3,30 +3,52 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import config from "../../data/ConfigData";
 
-export default class Example extends React.Component {
+export default class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isOpen: false,
       collapse: "collapse",
-      dropdownMenu: "dropdown-menu"
+      dropdownMenu: "dropdown-menu",
+      windowsHistory: null
     };
   }
 
-  toggleCollapse = (a) => {
+  toggleCollapse = a => {
     this.setState({
       collapse: a
     });
-  }
+  };
 
-  toggleDropdown = () => {
+  toggleDropdown = a => {
+    if (this.state.dropdownMenu === a) {
+      this.setState({
+        dropdownMenu: null
+      });
+    } else {
+      this.setState({
+        dropdownMenu: "dropdown-menu"
+      });
+    }
+  };
+
+  componentDidMount() {
     this.setState({
-      dropdownMenu: null
+      windowsHistory: this.props.route
     });
   }
-  
-  // componentDidMount(){
-  //   console.log('collapse is',this.state.collapse)
+
+  // componentDidUpdate() {
+  //   if (this.props.route === window.history.state) {
+  //     this.setState({
+  //       collapse: null
+  //     });
+  //     console.log("routecdU", this.props.route);
+  //     console.log("windowcDU", this.state.windowsHistory);
+  //     console.log("cDU", window.history.state);
+  //   } else {
+  //     return null;
+  //   }
   // }
 
   render() {
@@ -74,13 +96,13 @@ export default class Example extends React.Component {
             </a>
             <button
               className="navbar-toggler navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navigation"
-              aria-controls="navigation-index"
-              aria-expanded="true"
-              aria-label="Toggle navigation"
-              onClick={()=> this.toggleCollapse(null)}
+              // type="button"
+              // data-toggle="collapse"
+              // data-target="#navigation"
+              // aria-controls="navigation-index"
+              // aria-expanded="true"
+              // aria-label="Toggle navigation"
+              onClick={() => this.toggleCollapse(null)}
             >
               <span className="navbar-toggler-bar bar1" />
               <span className="navbar-toggler-bar bar2" />
@@ -88,7 +110,9 @@ export default class Example extends React.Component {
             </button>
           </div>
           <div
-            className={`${this.state.collapse} navbar-collapse justify-content-end`}
+            className={`${
+              this.state.collapse
+            } navbar-collapse justify-content-end`}
             id="navigation"
           >
             <div className="navbar-collapse-header">
@@ -140,7 +164,7 @@ export default class Example extends React.Component {
                     aria-controls="navigation-index"
                     aria-expanded="true"
                     aria-label="Toggle navigation"
-                    onClick={()=>this.toggleCollapse("collapse")}
+                    onClick={() => this.toggleCollapse("collapse")}
                   >
                     <FontAwesomeIcon
                       icon={["far", "window-close"]}
@@ -225,7 +249,7 @@ export default class Example extends React.Component {
                   // href="#"
                   className="dropdown-toggle nav-link"
                   data-toggle="dropdown"
-                  onClick={()=> this.toggleDropdown()}
+                  onClick={() => this.toggleDropdown("dropdown-menu")}
                   style={{ cursor: "pointer" }}
                 >
                   <span d-lg-none d-xl-none>
@@ -236,7 +260,9 @@ export default class Example extends React.Component {
                     <span style={{ marginLeft: 6 }}>My Projects</span>
                   </span>
                 </span>
-                <div className={`${this.state.dropdownMenu} `}>
+                <div
+                  className={`${this.state.dropdownMenu} dropdown-with-icons`}
+                >
                   {/* eslint-disable-next-line */}
                   <a
                     // href="current-project"

@@ -8,9 +8,6 @@ import { fas, faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 // Navigation
 import NavBar from "./components/Navigation/NavBar";
 import Footer from "./components/Navigation/Footer";
-// import NavBar from "./components/Navigation/NavBar2";
-// import NavBar from "./components/Navigation/NavBar3";
-// import NavBar2 from "./components/Navigation/NavBar4";
 
 // Content
 import Homepage from "./components/HomePage";
@@ -22,7 +19,8 @@ library.add(fab, far, fas, faEnvelopeSquare);
 
 class App extends Component {
   state = {
-    route: "home-page"
+    route: "home-page",
+    path: window.history.pushState("/", "Home Page", "/")
   };
 
   // componentDidMount() {
@@ -65,42 +63,46 @@ class App extends Component {
 
     return (
       <React.Fragment>
+
         {route === "profile-page" ? (
           <div className="profile-page">
-            <NavBar onRouteChange={onRouteChange} />
-            {/* <NavBar2 onRouteChange={onRouteChange} /> */}
+            <NavBar onRouteChange={onRouteChange} route={route} />
             <div className="wrapper">
               <ProfilePage onRouteChange={onRouteChange} />
               <Footer onRouteChange={onRouteChange} />
             </div>
           </div>
+
         ) : route === "project-current" ? (
           <div className="profile-page">
-            {/* <NavBar onRouteChange={onRouteChange} /> */}
+            <NavBar onRouteChange={onRouteChange} route={route} />
             <div className="wrapper">
               <CurrentProject />
               <Footer onRouteChange={onRouteChange} />
             </div>
           </div>
+
         ) : route === "project-past" ? (
           <div className="landing-page">
-            <NavBar onRouteChange={onRouteChange} />
+            <NavBar onRouteChange={onRouteChange} route={route} />
             <div className="wrapper">
               <PastProject />
               <Footer onRouteChange={onRouteChange} />
             </div>
           </div>
+
         ) : route === "home-page" ? (
           <div className="index-page">
-            <NavBar onRouteChange={onRouteChange} />
+            <NavBar onRouteChange={onRouteChange} route={route} />
             <div className="wrapper">
               <Homepage />
               <Footer onRouteChange={onRouteChange} />
             </div>
           </div>
+          
         ) : (
           <div className="index-page">
-            <NavBar onRouteChange={onRouteChange} />
+            <NavBar onRouteChange={onRouteChange} route={route} />
             <div className="wrapper">
               <Homepage />
               <Footer onRouteChange={onRouteChange} />
